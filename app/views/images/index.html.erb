@@ -1,0 +1,47 @@
+<h1>.: Image Gallery :.</h1>
+
+<fieldset class="border centerb img">
+	<legend class="legend">Pictures:</legend>
+	<%= image_tag("rails.png") %>
+</fieldset><br>
+
+<div class="centert">
+	<%= image_tag("left.png", :size => "50x50") %>
+	<%= image_tag("right.png", :size => "50x50") %>
+</div>
+<br>
+<div class="centert">
+	<em>TITLE:</em>
+</div>
+
+<div>
+	<fieldset style="width:70%", class="centerb">
+    	<legend class="legend">Description:</legend>
+
+
+	</fieldset>
+</div>
+<br>
+<div>
+	<fieldset style="width:70%", class="centerb">
+    	<legend class="legend">Comments:</legend>
+    		<%= @image.each do |i|%>
+
+    			<%= i.comment %>
+
+    			<td>/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/</td>
+    		<% end %>
+	</fieldset>
+</div>
+
+<fieldset style="width:70%", class="centerb">
+	<div class="italic">
+		<%= form_tag images_path, method: :get do %>
+			<%= text_field_tag :comment , '', :size => 155, :maxlength => 100  %>
+			<%= submit_tag "add comment", :class => "italic" %>	
+		<% end %>
+	</div>
+</fieldset>
+
+<div class="notice"><%= flash[:notice] %></div>
+
