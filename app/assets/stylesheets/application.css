@@ -1,13 +1,63 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
- *= require_self
- *= require_tree .
- */
+/*@import url("reset.css");*/
+
+h1{
+	text-align: center;
+	font-style: italic;
+}
+
+.legend{
+	color: black; 
+	font-weight: bold;
+	font-style: italic;
+}
+
+.border{
+	width: 150px; 
+	height: 150px;
+}
+
+.centert{
+	text-align: center;
+}
+
+.centerb{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.img{
+	text-align: center
+}
+
+.italic{
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+}
+
+.notice{
+	border-style:inset;
+	border-width:1px;
+	border-color:green;
+	text-align: center;
+	color: green;
+	position:fixed;
+	top: 30px;
+	left: 215px;
+	padding: 5px 5px 5px 5px;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;	
+}
+
+.error{
+	border-style:inset;
+	border-width:1px;
+	border-color:red;
+	text-align: center;
+	color: red;
+	position:fixed;
+	top: 30px;
+	left: 215px;
+	padding: 5px 5px 5px 5px;
+	font-style: italic;
+	font-family: "Times New Roman", Times, serif;
+}
